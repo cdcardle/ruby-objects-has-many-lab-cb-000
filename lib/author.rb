@@ -1,4 +1,19 @@
 class Author
-  attr_accessor :author
+  attr_accessor :name
+  @@post_count = 0
 
+  def intialize(name)
+    @name = name
+    @posts = []
+  end
+
+  def posts
+    @posts
+  end
+
+  def add_post(post)
+    self.posts << post
+    post.author = self
+    @@post_count += 1
+  end
 end
