@@ -4,7 +4,7 @@ class Song
   def add_song_by_name(name)
     song = self.new
     song.name = name
-    
+
   end
 
 end
